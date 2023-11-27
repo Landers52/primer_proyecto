@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola mundo soy landers</title>
-</head>
-<body>
-    <h1>Hola a todos</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block titulo %} Index #dinamico {% endblock %}
+
+{% block contenido %} 
+<p> hola desde el index </p>
+{% if valor > 60 %}
+<p>{{nombre}}</p>
+{% else %}
+<p>el valor es menor a 60</p>
+{% endif %}
+{% endblock %}
